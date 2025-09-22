@@ -43,17 +43,17 @@
         // Form Validation
     contactForm.addEventListener('submit', (e) => {
     let isValid = true;
-    
+
     // Reset errors
     document.querySelectorAll('.error').forEach(el => el.style.display = 'none');
-    
+
     // Validate name
     const name = document.getElementById('name');
     if (!name.value.trim()) {
         document.getElementById('nameError').style.display = 'block';
         isValid = false;
     }
-    
+
     // Validate email
     const email = document.getElementById('email');
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -61,28 +61,22 @@
         document.getElementById('emailError').style.display = 'block';
         isValid = false;
     }
-    
+
     // Validate subject
     const subject = document.getElementById('subject');
     if (!subject.value.trim()) {
         document.getElementById('subjectError').style.display = 'block';
         isValid = false;
     }
-    
+
     // Validate message
     const message = document.getElementById('message');
     if (!message.value.trim()) {
         document.getElementById('messageError').style.display = 'block';
         isValid = false;
     }
-    
-    // Submit form if valid
-    if (isValid) {
-        // Remove e.preventDefault() from here and let the form submit naturally
-        contactForm.submit(); // Trigger the form submission to Formspree
-        alert('Thank you for your message! I will get back to you soon.');
-        contactForm.reset();
-    } else {
-        e.preventDefault(); // Prevent submission only if validation fails
+
+    if (!isValid) {
+        e.preventDefault(); // stop submit only if invalid
     }
 });

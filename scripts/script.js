@@ -41,84 +41,48 @@
 
 
         // Form Validation
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            let isValid = true;
-            
-            // Reset errors
-            document.querySelectorAll('.error').forEach(el => el.style.display = 'none');
-            
-            // Validate name
-            const name = document.getElementById('name');
-            if (!name.value.trim()) {
-                document.getElementById('nameError').style.display = 'block';
-                isValid = false;
-            }
-            
-            // Validate email
-            const email = document.getElementById('email');
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email.value)) {
-                document.getElementById('emailError').style.display = 'block';
-                isValid = false;
-            }
-            
-            // Validate subject
-            const subject = document.getElementById('subject');
-            if (!subject.value.trim()) {
-                document.getElementById('subjectError').style.display = 'block';
-                isValid = false;
-            }
-            
-            // Validate message
-            const message = document.getElementById('message');
-            if (!message.value.trim()) {
-                document.getElementById('messageError').style.display = 'block';
-                isValid = false;
-            }
-            
-            // Submit form if valid
-            if (isValid) {
-                // Form submission logic would go here
-                alert('Thank you for your message! I will get back to you soon.');
-                contactForm.reset();
-            }
-        });
-
-
-        // Scroll Animation
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'fadeInUp 1s ease forwards';
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-
-        fadeElements.forEach(element => {
-            observer.observe(element);
-        });
-
-
-        // Smooth Scrolling for Anchor Links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+    contactForm.addEventListener('submit', (e) => {
+    let isValid = true;
+    
+    // Reset errors
+    document.querySelectorAll('.error').forEach(el => el.style.display = 'none');
+    
+    // Validate name
+    const name = document.getElementById('name');
+    if (!name.value.trim()) {
+        document.getElementById('nameError').style.display = 'block';
+        isValid = false;
+    }
+    
+    // Validate email
+    const email = document.getElementById('email');
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.value)) {
+        document.getElementById('emailError').style.display = 'block';
+        isValid = false;
+    }
+    
+    // Validate subject
+    const subject = document.getElementById('subject');
+    if (!subject.value.trim()) {
+        document.getElementById('subjectError').style.display = 'block';
+        isValid = false;
+    }
+    
+    // Validate message
+    const message = document.getElementById('message');
+    if (!message.value.trim()) {
+        document.getElementById('messageError').style.display = 'block';
+        isValid = false;
+    }
+    
+    // Submit form if valid
+    if (isValid) {
+        // Remove e.preventDefault() from here and let the form submit naturally
+        contactForm.submit(); // Trigger the form submission to Formspree
+        alert('Thank you for your message! I will get back to you soon.');
+        contactForm.reset();
+    } else {
+        e.preventDefault(); // Prevent submission only if validation fails
+    }
+});

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe Higgs | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">Freelance Web Design</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Example Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Wordpress and Content Management Systems</h2>
+            <div class="about-container">
+                <div class="about-img fade-in">
+                    <img src="../assets/askYourDietitian.png" alt="Wordpress Logo">
+                </div>
+                <div class="about-content fade-in">
+                    <p>I have dabbled with Wordpress for years, but last year I took on my first client and redesigned their website. I have since maintained the website and tracked performance free of charge. This is a service I plan to continue for all my customers, always being available for questions or quick fixes should an issue arise.</p>
+                    <p>Content Management Systems (CMS) are highly effective ways for people without explicit coding or programming practice to build, manage and maintain websites or stores without needing to know how to code. However, they can be quite tricky (and expensive).</p>
+                    <p>A key part of my service is providing the tools you need to be able to pick up from where I leave off, meaning no ongoing expenses for you once the website is built, unless you wish to commission me for more features or a redesign. I ensure this by capturing screen recordings and constructing a document containing key links and info along with context specific to your website.</p>
+                    <p>Whether you want a single page or multipage website, I can turnaround a basic Wordpress page within two weeks (or sooner for increased rates), having your website up and running in no time at all.</p>
+                    <a href="#contact" class="btn">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="skills">
+        <div class="container">
+            <h2>My Services</h2>
+            <div class="skills-container">
+                <div class="skill-card fade-in">
+                    <i class="fas fa-newspaper"></i>
+                    <h3>Single Page Websites</h3>
+                    <p>Need a website to advertise yourself or a business, with no need for any more than a single page? I can utilise a variety of tech stacks to build your ideal page from scratch. Responsive or static, plain or creative, what are you waiting for?</p>
+                </div>
+                
+                <div class="skill-card fade-in">
+                    <i class="fas fa-newspaper"></i>
+                    <h3>Multi Page Websites</h3>
+                    <p>Do you need a website with more than a single page? I can utilise a variety of tech stacks to build your ideal page from scratch. Ongoing maintenance and updates included. Reach out to get started on your ideal website today.</p>
+                </div>
+                
+                <div class="skill-card fade-in">
+                    <i class="fas fa-wordpress"></i>
+                    <h3>Wordpress/CMS</h3>
+                    <p>Own or want to build a website that you can manage yourself? With a specialism in CMS systems, I can edit or build a website complete with a store or other features and coach you to manage the site yourself, reducing costs for you in the long-term.</p>
+                </div>
+                
+                <div class="skill-card fade-in">
+                    <i class="fas fa-people-group"></i>
+                    <h3>Consultation</h3>
+                    <p>Need a website but unsure where to start? I offer free consultations and can mock up your vision in minutes over a coffee or virtual meeting. A totally free service to help you to determine what exactly you need to do to get to where you want to be.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info fade-in">
+                    <h3>Let's talk about your project</h3>
+                    <p>I'm currently available for freelance work. If you are looking to build your website, reach out for your free consultation today. I pride myself on high-quality work and coaching, delivering unmatched customer service and attention to detail. I believe in doing what I can to make sure you don't need to pay for minor edits or maintenance for your website by coaching you and providing documentation and recordings to enable you to take things into your own hands.</p>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>joe.higgs@live.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Walthamstow, London, UK</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>07753911825</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form fade-in">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" placeholder="Your name">
+                            <div class="error" id="nameError">Please enter your name</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" placeholder="Your email">
+                            <div class="error" id="emailError">Please enter a valid email</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" placeholder="Subject">
+                            <div class="error" id="subjectError">Please enter a subject</div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" placeholder="Your message"></textarea>
+                            <div class="error" id="messageError">Please enter your message</div>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/nonebula" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/joelloydhiggs" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/no_nebula_8421" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/joeh.516" class="social-link"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="copyright">© 2025 Joe Higgs. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../scripts/script.js"></script>
+</body>
+</html>
